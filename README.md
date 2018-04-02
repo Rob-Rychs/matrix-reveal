@@ -2,6 +2,8 @@
 
 ![Home](./images/readme.png)
 
+[Demo](https://rob-rychs.github.io/matrix-reveal/)
+
 This is a theme for reveal.js to build amazing slide decks for code presentations with HTML5 and Markdown.
 
 🚀 This theme is open-source
