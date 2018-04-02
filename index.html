@@ -1,0 +1,345 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+    <style>
+      /* .card {
+        height: 100vh;
+        width: 100vw;
+        margin-right: 100px;
+        background-color: black;
+      } */
+
+      .black {
+        background-color: black;
+        height: 100vh;
+        width: 100vw;
+      }
+      .shaded {
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100vh;
+        width: 100vw;
+      }
+      .terminal {
+        color: #0F0;
+      }
+      .color-me {
+        color: #f35626;
+        background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: hue 60s infinite linear;
+      }
+      @-webkit-keyframes hue {
+	      from {
+		      -webkit-filter: hue-rotate(0deg);
+	      }
+	      to {
+		      -webkit-filter: hue-rotate(360deg);
+	      }
+      }
+      .blinking-cursor {
+        -webkit-animation: 1s blink step-end infinite;
+        -moz-animation: 1s blink step-end infinite;
+        -ms-animation: 1s blink step-end infinite;
+        -o-animation: 1s blink step-end infinite;
+        animation: 1s blink step-end infinite;
+      }
+
+      @keyframes "blink" {
+        from, to {
+          color: transparent;
+        }
+        50% {
+          color: #0F0;
+        }
+      }
+
+      @-moz-keyframes blink {
+        from, to {
+          color: transparent;
+        }
+        50% {
+          color: #0F0;
+        }
+      }
+
+      @-webkit-keyframes "blink" {
+        from, to {
+          color: transparent;
+        }
+        50% {
+          color: #0F0;
+        }
+      }
+
+      @-ms-keyframes "blink" {
+        from, to {
+          color: transparent;
+        }
+        50% {
+          color: #0F0;
+        }
+      }
+
+      @-o-keyframes "blink" {
+        from, to {
+          color: transparent;
+        }
+        50% {
+          color: #0F0;
+        }
+      }
+      .dark-font {
+        color: rgb(55, 55, 58) !important;
+      }
+    </style>
+  </head>
+	<body>
+      
+		<div class="reveal">
+        <canvas id="c"></canvas>
+			<div class="slides">
+          <section data-transition="zoom">
+            <h3>Welcome to</h3>
+              <pre id="b" class="ascii-art color-me">
+       ███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗
+       ████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝
+       ██╔████╔██║███████║   ██║   ██████╔╝██║ ╚███╔╝
+       ██║╚██╔╝██║██╔══██║   ██║   ██╔══██╗██║ ██╔██╗
+       ██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║██║██╔╝ ██╗
+       ╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝                                                         
+              </pre>
+              <h3 class="fragment">A slide deck theme for creating</h3>
+              <h3 class="fragment"> <span class="terminal">><span class="blinking-cursor">$</span> code presentations</span> </h3>
+              <h3 class="fragment">using <br> <a href="https://github.com/hakimel/reveal.js/">reveal.js</a> + <a href="https://github.com/ryanj/gist-reveal">gist-reveal.it</a></h3>
+              <p>Built by: <a href="https://github.com/Rob-Rychs">Rob-Rychs</a></p>
+        </section>
+        <section>
+          <h2><span class="terminal">></span><span class="terminal blinking-cursor">$</span> <span class="color-me">Awesome Features</span></h2>
+          <ul>
+            <li class="fragment">Dope Matrix Background 🔥</li>
+            <li class="fragment">Some fancy built-in css classes like <span class="color-me">.color-me</span></li>
+            <li class="fragment">Nice transitions</li>
+            <li class="fragment">Write slide content in html or markdown</li>
+            <li class="fragment">Supports nested slides</li>
+            <li class="fragment">Arrow key navigation</li>
+            <li class="fragment">Toggle presentation overview with ESC key</li>
+            <li class="fragment">Use a github gist backend for creating slides</li>
+            <li class="fragment">And tons more... see the <a href="https://revealjs.com/">reveal.js demo</a> and <a href="http://gist-reveal.it/">reveal.it demo</a> for details</li>
+          </ul>
+        </section>
+        <section data-transition="convex">
+          <section data-markdown  class="color-me">
+            ## I'm a slide written in 
+            # markdown 
+            ## with a nested slide below me
+          </section>
+          <section data-markdown class="">
+             ## You found me! 👻
+          </section>
+        </section>
+        <section data-transition="convex">
+          <section class="shaded">
+              <h2><span class="terminal">></span><span class="terminal blinking-cursor">$</span> <span class="color-me">Shaded backgrounds</span></h2>
+              <h4 class="fragment dark-font"> This slide uses a transparent shaded background for it's content section</h4>
+              <ul>
+                <li class="fragment dark-font">This is done by adding the class '.shaded' to the slide < section > element</li>
+                <li class="fragment dark-font">it overlays the Matrix effect and lets you use dark font colors</li>
+              </ul>
+              <h1 class="fragment color-me">🕶</h1>
+              <p class="fragment dark-font">check ⬇ </p>
+          </section>
+          <section class="black">
+              <h2><span class="terminal">></span><span class="terminal blinking-cursor">$</span> <span class="color-me">Black backgrounds</span></h2>
+              <h4 class="fragment"> This slide uses a solid black background for it's content section</h4>
+              <br>
+              <ul>
+                <li class="fragment">This is done by adding the class '.black' to the slide's < section > element</li>
+                <li class="fragment">it hides the Matrix background almost completely</li>    
+              </ul>
+              <br>
+              <br>
+              <h1 class="fragment color-me">💯</h1> 
+          </section>
+        </section>
+        <section>
+          <section>
+              <h2><span class="terminal">></span><span class="terminal blinking-cursor">$</span> <span class="color-me">The Matrix background</span></h2>
+              <h4 class="fragment">The Matrix background is actually 100% vanilla javascript</h4>
+              <br>
+              <ul>
+                <li class="fragment">It's built using a <span class="color-me">HTML5 < canvas ></span> element</li>
+                <li class="fragment">I made an interactive screencast where I walk through the code on <a href="https://scrimba.com/c/cPym4HK">Scrimba</a></li>
+              </ul>
+              <br>
+              <br>
+              <h4 class="fragment">Head <span class="color-me">⬇</span> to checkout the script</h4>
+          </section>
+          <section>
+              <h3>"This is your last chance. After this, there is no turning back. You take the <span style='color: blue;'>blue pill</span> <span class="color-me">⬆</span> - the story ends, you wake up in your bed and believe whatever you want to believe. You take the <span style='color: red;'>red pill</span> <span class="color-me">⬇</span> - you stay in Wonderland and I show you how deep the rabbit-hole goes."</h3>
+              <p style='position: right'>-Morpheus</p>
+          </section>
+          <section>
+              <h2><span class="terminal">></span><span class="terminal blinking-cursor">$</span> <span class="color-me">Enter The Matrix</span></h2>
+            <pre><code class="hljs" style="word-wrap: break-word;">
+    // geting canvas by id c
+    var c = document.getElementById("c");
+    var ctx = c.getContext("2d");
+
+    //making the canvas full screen
+    c.height = window.innerHeight;
+    c.width = window.innerWidth;
+                
+    //chinese characters - taken from the unicode charset
+    var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+
+    //converting the string into an array of single characters
+    matrix = matrix.split("");
+                
+    var font_size = 10; // set font_size to 10
+    var columns = c.width/font_size; //number of columns for the rain
+    var drops = []; //an array of drops - one per column
+                    
+    // for each column assign 1 letter to be dropped in unison
+    for(var x = 0, x < columns, x++)
+    drops[x] = 1; 
+                
+    //drawing the characters
+    function draw() {
+      // translucent BG color to show trail
+      ctx.fillStyle = "rgba(0, 0, 0, 0.04)"; 
+      // fillRect() function over whole viewport
+      ctx.fillRect(0, 0, c.width, c.height); 
+                
+      ctx.fillStyle = "#0F0"; //green text
+      ctx.font = font_size + "px arial";
+
+      //looping over drops
+      for(var i = 0; i < drops.length; i++) {
+
+        //a random chinese character to print
+        var text = matrix[Math.floor(Math.random()*matrix.length)]; 
+        //x = i*font_size, y = value of drops[i]*font_size
+        ctx.fillText(text, i*font_size, drops[i]*font_size);
+                
+        //sending the drop back to the top randomly after it has crossed the screen
+        //adding a randomness to the reset to make the drops scattered on the Y axis
+        if(drops[i]*font_size > c.height && Math.random() > 0.975)
+          drops[i] = 0;
+                
+        //incrementing Y coordinate
+         drops[i]++;
+      }
+    }
+    // draw a new letter every 35milliseconds
+    setInterval(draw, 35);
+            </code></pre>
+            <p>Become the <span class="color-me">ONE</span></p>
+          </section>
+        </section>
+        <section>
+            <h2><span class="terminal">></span><span class="terminal blinking-cursor">$</span> <span class="color-me">The End</span></h2>
+          <br>
+          <video autoplay loop>
+            <!-- <source data-src="video.webm type=video/webm" /> -->
+            <source data-src="images/flying-keanu.mp4" type="video/mp4" />
+          </video>
+          <br>
+          <p>If you like this theme check out the source on <a href="">GitHub</a><p/>
+            <sub>Special thanks to <a href="https://gist.github.com/ryanj">ryanj</a> and <a href="https://github.com/hakimel">hakimel</a><sub>  
+        </section>  
+			</div>
+    </div>
+    
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+    </script>
+    <script> 
+      // geting canvas by id c
+      var c = document.getElementById("c");
+      var ctx = c.getContext("2d");
+  
+      //making the canvas full screen
+      c.height = window.innerHeight;
+      c.width = window.innerWidth;
+  
+      //chinese characters - taken from the unicode charset
+      var matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%";
+      //converting the string into an array of single characters
+      matrix = matrix.split("");
+  
+      var font_size = 10;
+      var columns = c.width/font_size; //number of columns for the rain
+      //an array of drops - one per column
+      var drops = [];
+      //x below is the x coordinate
+      //1 = y co-ordinate of the drop(same for every drop initially)
+      for(var x = 0; x < columns; x++)
+        drops[x] = 1; 
+  
+      //drawing the characters
+      function draw()
+      {
+        //Black BG for the canvas
+        //translucent BG to show trail
+        ctx.fillStyle = "rgba(0, 0, 0, 0.04)";
+        ctx.fillRect(0, 0, c.width, c.height);
+  
+        ctx.fillStyle = "#0F0"; //green text
+        ctx.font = font_size + "px arial";
+        //looping over drops
+        for(var i = 0; i < drops.length; i++)
+        {
+          //a random chinese character to print
+          var text = matrix[Math.floor(Math.random()*matrix.length)];
+          //x = i*font_size, y = value of drops[i]*font_size
+          ctx.fillText(text, i*font_size, drops[i]*font_size);
+  
+          //sending the drop back to the top randomly after it has crossed the screen
+          //adding a randomness to the reset to make the drops scattered on the Y axis
+          if(drops[i]*font_size > c.height && Math.random() > 0.975)
+            drops[i] = 0;
+  
+          //incrementing Y coordinate
+          drops[i]++;
+        }
+      }
+  
+      setInterval(draw, 35);
+  
+      
+      </script>
+	</body>
+</html>
